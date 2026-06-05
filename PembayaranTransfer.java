@@ -1,0 +1,46 @@
+/*
+ * NAMA ADLI AL HADI
+ * NIM 2501081004
+ */
+package praktek210526;
+
+/**
+ *
+ * @author USER
+ */
+public class PembayaranTransfer extends Pembayaran implements CetakStruk{
+    private String namaBank;
+
+    public PembayaranTransfer(String namaBank, double jumlahBayar, String idTransaksi) {
+        super(jumlahBayar, idTransaksi);
+        this.namaBank = namaBank;
+    }
+
+    public String getNamaBank() {
+        return namaBank;
+    }
+
+    public void setNamaBank(String namaBank) {
+        this.namaBank = namaBank;
+    }
+
+    @Override
+    public void prosesPembayaran() {
+      System.out.println("proses pembayaran secara transfer");
+      System.out.println("Bank: "+namaBank);
+      System.out.println("Id transaksi: "+idTransaksi);
+      System.out.println("Jumlah Bayar:Rp. "+jumlahBayar);
+      
+    }
+
+    @Override
+    public void cetak() {
+       System.out.println("proses pembayaran secara transfer");
+       System.out.println("Bank: "+namaBank);
+       System.out.println("Id transaksi: "+idTransaksi);
+       System.out.println("Jumlah Bayar:Rp. "+jumlahBayar);
+       
+    }
+    
+    
+}
